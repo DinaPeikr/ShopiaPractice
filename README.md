@@ -1,2 +1,0 @@
-# Shopia
-Shopia - practice landing
