@@ -1,0 +1,132 @@
+.reset();
+.wrapper {
+  .wrapper();
+  position: relative;
+}
+
+@supports (padding: max(0px)) {
+  .wrapper {
+    padding-left: max(@offset_one_side, env(safe-area-insert-left));
+    padding-right: max(@offset_one_side, env(safe-area-insert-right));
+  }
+}
+
+.pseudo-full-width-background::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  background: inherit;
+  top: 0;
+  left: -50vw;
+  right: -50vw;
+  margin: auto;
+  z-index: -1;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+button, input, textarea {
+  -webkit-appearance: none;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance:none;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  font-size: @font_size;
+  line-height: @line_height;
+}
+
+body {
+
+  min-height: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+a, .link {
+  text-decoration: none;
+  color: inherit;
+  transition: all .5s;
+}
+a:link, .link:link  {
+
+}
+
+a:visited,.link:visited  {
+
+}
+
+a:hover, .link:hover  {
+
+}
+
+a:focus, .link:focus  {
+  outline: none;
+}
+
+a:active, .link:active  {
+
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.site-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.section__heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  .xs-block({ justify-content: space-around;});
+  &::before, &::after{
+  content: "";
+  display: block;
+  background: @color_line_border;
+  .size_custom(4);
+  height: 1px;
+    .md-block({
+      .size_custom(2);
+    });
+    .sm-block({
+      .size_custom(1);
+    });
+    .xs-block({ display: none;
+    });
+
+}
+  &_cube{
+    width: 20px;
+    height: 20px;
+    background: @color_primery;
+    transform: rotate(45deg);
+    .xs-block({
+    });
+  }
+}
+.heading{
+  font-family: "PlayfairDisplay", serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.875rem;
+  color: @color_black;
+  text-align: center;
+  cursor: pointer;
+}

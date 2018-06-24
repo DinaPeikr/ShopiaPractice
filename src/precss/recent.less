@@ -1,0 +1,107 @@
+.recent{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  &__heading{
+
+  }
+  &__cards{
+   .row-flex();
+    justify-content: center;
+    align-items: center;
+  }
+  &__inner{
+    border: 1px solid @color_line_border;
+    padding: 0 15px;
+  }
+  &__card{
+    .col();
+    margin-top: 15px;
+    margin-bottom: 15px;
+    .size(3);
+    .size-md(6);
+    .size-xs(12);
+     position: relative;
+  }
+}
+
+.card {
+  transition: all .5s;
+  cursor: pointer;
+  .label {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    color: @color_white;
+    font-family: @font_Lato;
+    font-weight: bold;
+    font-size: 1.4125rem;
+    border-radius: 50%;
+    background: @color_button;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 555;
+  }
+
+  &__img {
+    width: 100%;
+    transition: all .5s;
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    &:hover{
+      background: rgba(0, 0, 0, 0.5);
+    }
+    &:hover .btn__addcart{
+      background: @color_button;
+      background: linear-gradient(135deg, transparent 32px, @color_button 0) top left,
+      linear-gradient(-135deg, transparent 32px, @color_button 0) top right;
+      background-size: 51% 100%;
+      background-repeat: no-repeat;
+    }
+    &__addcart {
+      align-self: flex-end;
+    }
+
+  .btn {
+    color: @color_white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &__addcart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-family: @font_Lato;
+      font-weight: bold;
+      font-size: 0.875rem;
+      padding: 15px 50px;
+      z-index: 555;
+      background: @color_black;
+      background: linear-gradient(135deg, transparent 32px, @color_black 0) top left,
+      linear-gradient(-135deg, transparent 32px, @color_black 0) top right;
+      background-size: 51% 100%;
+      background-repeat: no-repeat;
+      &_img{
+        display: inline-block;
+        fill: currentColor;
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+      }
+    }
+
+  }
+}
+}

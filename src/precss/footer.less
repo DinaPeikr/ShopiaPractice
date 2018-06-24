@@ -1,0 +1,142 @@
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: @color_grey;
+  position: relative;
+
+  &__blocks {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    .row-flex();
+    color: @color_footer_text;
+    font-size: 0.875rem;
+    .sm-block({
+      justify-content: center;
+    });
+
+  }
+  &__heading {
+    color: @color_white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+  &__block {
+    .col();
+    .size(3);
+    .size-md(6);
+    .size-xs(12);
+.md-block({
+  margin-top: 15px;
+  margin-bottom: 15px;
+});
+    &_menu {
+
+    }
+    &_item {
+
+    }
+    &_link {
+      display: block;
+      padding: 10px 0;
+    }
+    &_shops {
+
+    }
+    &_information {
+
+    }
+    &_customer {
+
+    }
+    &_connect {
+
+      &-links{
+        .row-ib();
+      }
+      &-link{
+        .col-ib();
+        vertical-align: middle;
+        padding: 20px 10px;
+      }
+      &-text{
+        font-size: 1rem;
+        font-weight: bold;
+        color: @color_white;
+        text-transform: uppercase;
+        padding: 20px 0;
+        i{
+          font-family: @font_Playfair;
+          text-transform: none;
+          margin: 0 5px;
+        }
+     }
+    }
+  }
+  .form{
+    margin: 20px 0;
+    padding: 3px;
+   }
+  &__form{
+    border: 1px solid @color_copyright_text;
+    display: flex;
+    flex-wrap: wrap;
+      &_input {
+        padding: 8px;
+        border: 0;
+        outline: 0;
+        flex-grow: 9999;
+        background: transparent;
+        &::placeholder {
+          color: @color_footer_text;
+          font-size: 12px;
+        }
+      }
+      &_button {
+        padding: 5px 15px;
+        background: #323030;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: @color_white;
+        font-size: 12px;
+        text-transform: uppercase;
+        flex-grow: 1;
+        &:hover {
+          background: lighten(#323030, 10%);
+        }
+
+      }
+
+  }
+  .copyright{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top : 2px solid @color_copyright_text;
+    &__text{
+      color: @color_copyright_text;
+      font-size: 0.6875rem;
+      &_item{
+        padding-bottom: 5px;
+        display: block;
+      }
+}
+    &__links{
+      .row-ib();
+}
+    &__link{
+    .col-ib();
+      vertical-align: middle;
+      margin: 15px;
+}
+  }
+  &__bottom {
+    background: @color_black;
+    color: @color_footer_text;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+

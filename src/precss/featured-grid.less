@@ -1,0 +1,133 @@
+.featured2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+.section__heading_featured2{
+  padding-left: 0;
+  padding-right: 0;
+}
+  &__content {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px 30px;
+    grid-template-areas:
+            " small1 big small3"
+            " small2 big small4";
+
+    .md-block({
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-gap: 15px 30px;
+      grid-template-areas:
+              " big big small1"
+              " big big small2"
+              " big big small3"
+              " big big small4";
+    });
+    .xs-block({
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 15px 15px;
+      grid-template-areas:
+              " big"
+              " small1"
+              " small2"
+              " small3"
+              " small4";
+    });
+  }
+  &__link{
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+     display: flex;
+    justify-content: center;
+    position: absolute;
+     top: 20px;
+    left: 20px;
+     right: 20px;
+      bottom: 20px;
+     border: 3px solid @color_white;
+    &:hover{
+      background: rgba(0, 0, 0, 0.35);
+      border: 0 none;
+    }
+    &:hover .featured2__btn{
+      display: inline-flex;
+    }
+    &:hover::before{
+      display: block;
+      content: '';
+      width: 50px;
+      height: 1px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: lighten(@color_button,20%);
+    }
+    &:hover::after{
+      display: block;
+      content: '';
+      width: 1px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: lighten(@color_button,20%);
+    }
+  }
+  &__btn{
+     display: none;
+     padding: 10px 20px;
+     background: @color_button;
+    margin-bottom: 10%;
+    align-self: flex-end;
+    color: @color_white;
+   }
+}
+
+.bigger {
+  position: relative;
+  grid-area: big;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+}
+
+.small {
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+}
+.small1{
+  position: relative;
+  grid-area: small1;
+}
+.small2{
+   position: relative;
+  grid-area: small2;
+}
+.small3{
+    position: relative;
+  grid-area: small3;
+}
+.small4{
+     position: relative;
+  grid-area: small4;
+}
+
+
