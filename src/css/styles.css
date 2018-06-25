@@ -138,6 +138,7 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   position: relative;
+  min-width: 320px;
 }
 @supports (padding: max(0px)) {
   .wrapper {
