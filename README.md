@@ -1,2 +1,1 @@
-# Shopia
-Shopia - practice landing
+# ShopiaPractice
