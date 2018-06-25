@@ -8,6 +8,42 @@ header{
   justify-content: center;
   align-items: center;
   position: relative;
+
+  .menu__toggle{
+    display: none;
+    padding: 15px 0;
+    .col();
+    .size(4);
+    .size-sm(6);
+    cursor: pointer;
+    .lg-block({
+      display: block;
+      text-align: center;
+
+    });
+    .xs-block({
+      padding-bottom: 20px;
+    });
+    &_nav{
+      color: @color_black;
+      &-img{
+        display: inline-block;
+        fill: currentColor;
+        width: 39px;
+        height: 32px;
+      }
+    }
+    &_social{
+      color: @color_primery;
+
+      &-img{
+        display: inline-block;
+        fill: currentColor;
+        width: 39px;
+        height: 32px;
+      }
+    }
+  }
   .nav__menu{
     .col();
     .size(4);

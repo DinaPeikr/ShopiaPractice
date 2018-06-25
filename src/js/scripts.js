@@ -40,27 +40,7 @@ $(function () {
         }
     });
 
-    /* Menu User */
-
-    $('.menu__toggle_user').click(function () {
-        if (!$('.user__menu_item').hasClass('openDone')) {
-            $('.user__menu_item').addClass('openDone');
-            $('.user__menu').css("transform", "translateX(calc(100vw - 250px))");
-        }
-        else {
-            $('.user__menu_item').removeClass('openDone');
-            $('.user__menu').css("transform", "translateX(100vw)");
-        }
-    });
-
-    $(window).resize(function () {
-        if ($(document).width() > 1200) {
-            $('.user__menu').removeAttr('style');
-        }
-    });
-
     /* Scroll To Top*/
-
     let scrl = 0;
     let st = $('.scroll-to-top');
     $(window).scroll(function () {
