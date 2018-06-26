@@ -37,47 +37,22 @@ $(function () {
     /* Scroll To Top*/
     let scrl = 0;
     let st = $('.scroll-to-top');
+    let umt = $('.user__menu_toggle');
     $(window).scroll(function () {
         if ($(this).scrollTop() > 500) {
             if (scrl === 0) {
                 scrl = 1
-                st.addClass('vis')
+                st.addClass('vis');
             }
         } else if (scrl === 1) {
             scrl = 0
-            st.removeClass('vis')
+            st.removeClass('vis');
         }
     })
     st.on('click', function () {
         return $('html, body').animate({scrollTop: 0}, 1000)
     })
 
-    /* Menu User */
-
-    $('.user__menu_toggle').click(function() {
-
-        if(!$('.user__menu_item').hasClass('openDone'))
-        {
-            $('.user__menu_item').addClass('openDone');
-            $('.user__menu').css("left", "0px");
-        }
-        else
-        {
-            $('.user__menu_item').removeClass('openDone');
-            $('.user__menu').css("left", "100vw");
-
-
-        }
-
-    });
-
-
-    $(window).resize(function(){
-        if ($(window).width() > 992)
-        {
-            $('.user__menu_item').removeAttr('style');
-        }
-    });
 
     /* Slider */
     // $('.slider__items').slick({

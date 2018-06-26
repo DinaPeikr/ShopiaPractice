@@ -274,13 +274,6 @@ img {
   justify-content: space-between;
   padding-top: 13px;
   padding-bottom: 13px;
-  overflow: hidden;
-}
-@media screen and (max-width: 992px) {
-  .user__inner {
-    padding-top: 7px;
-    padding-bottom: 7px;
-  }
 }
 .user__menu {
   box-sizing: border-box;
@@ -289,19 +282,46 @@ img {
   margin-right: 15px;
   display: flex;
   flex-wrap: wrap;
-  overflow: hidden;
 }
 @media screen and (max-width: 992px) {
   .user__menu {
     display: block;
+    position: fixed;
+    padding: 25px 10px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 250px;
     background: #f2f2f2;
-    width: calc(100% - 30px);
-    position: absolute;
-    top: 100%;
-    left: 100vw;
-    z-index: 999;
-    transition: 1s ease;
+    top: 0;
+    bottom: 0;
+    right: -250px;
+    transition: right .2s;
+    z-index: 9999;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
   }
+}
+.user__menu_ticker {
+  display: none;
+}
+.user__menu_ticker:checked ~ .user__menu_toggle {
+  z-index: 10000;
+}
+.user__menu_ticker:checked ~ .user__menu {
+  right: 0;
+}
+.user__menu_ticker:checked ~ .user__menu_toggle span.first {
+  -webkit-transform: rotate(45deg);
+  top: 10px;
+  background: #000000;
+}
+.user__menu_ticker:checked ~ .user__menu_toggle span.second {
+  opacity: 0;
+}
+.user__menu_ticker:checked ~ .user__menu_toggle span.third {
+  -webkit-transform: rotate(-45deg);
+  top: -10px;
+  background: #000000;
 }
 .user__menu_toggle {
   color: #b2b2b2;
@@ -311,11 +331,34 @@ img {
   margin-left: 15px;
   margin-right: 15px;
   cursor: pointer;
+  background: transparent;
+  padding: 0;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  transition: all .23s;
+  z-index: 3;
+  width: 25px;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+.user__menu_toggle:hover span {
+  background: #000000;
+}
+.user__menu_toggle span {
+  display: block;
+  height: 5px;
+  background: #b2b2b2;
+  margin: 5px 0 0;
+  transition: all .1s linear .23s;
+  position: relative;
+}
+.user__menu_toggle span.first {
+  margin-top: 0;
 }
 @media screen and (max-width: 992px) {
   .user__menu_toggle {
     display: block;
-    text-align: center;
   }
 }
 .user__menu_toggle-img {
