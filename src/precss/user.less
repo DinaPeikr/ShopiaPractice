@@ -2,12 +2,14 @@
 .user {
   background: @color_white_dark;
   font-size: 0.6875rem;
+
   &__inner{
     .row-flex();
     align-items: center;
     justify-content: space-between;
     padding-top: 13px;
     padding-bottom: 13px;
+    overflow: hidden;
     .md-block({
       padding-top: 7px;
       padding-bottom: 7px;
@@ -17,13 +19,14 @@
     .col();
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
     .md-block({
       display: block;
       background: @color_white_dark;
       .size(12);
       position: absolute;
       top: 100%;
-      left: 100vw;
+      right: -100vw;
       z-index: 999;
       transition: 1s ease;
     });
