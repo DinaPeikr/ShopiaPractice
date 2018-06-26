@@ -59,12 +59,12 @@ $(function () {
         if(!$('.user__menu_item').hasClass('openDone'))
         {
             $('.user__menu_item').addClass('openDone');
-            $('.user__menu').css("right", "0px");
+            $('.user__menu').css("left", "0px");
         }
         else
         {
             $('.user__menu_item').removeClass('openDone');
-            $('.user__menu').css("right", "-100vw");
+            $('.user__menu').css("left", "100vw");
 
 
         }
