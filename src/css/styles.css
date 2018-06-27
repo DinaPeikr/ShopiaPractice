@@ -833,10 +833,6 @@ img {
 .slick-dots li.slick-active button {
   background: #000000;
 }
-.slider {
-  background: #B6B2AE;
-  line-height: 0;
-}
 .slider .wrapper-full {
   padding-left: 0;
   padding-right: 0;
