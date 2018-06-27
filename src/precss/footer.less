@@ -152,6 +152,18 @@
     padding-top: 20px;
     padding-bottom: 20px;
     border-top : 2px solid @color_copyright_text;
+    position: relative;
+    &::before{
+      content: url("../images/footer-triangle.png");
+      display: block;
+      position: absolute;
+      top: -5px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+    }
     &__text{
       color: @color_copyright_text;
       font-size: 0.6875rem;
