@@ -61,18 +61,9 @@ $(function () {
         slidesToScroll: 1,
         arrows: false,
         dots: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 4000,
         fade: false
     });
-
-    // $(".slider__arrow-prev").on("click", function () {
-    //     $('.slider__items').slick("slickPrev");
-    //
-    // });
-    //
-    // $(".slider__arrow-next").on("click", function () {
-    //     $('.slider__items').slick("slickNext");
-    // });
 
 });
