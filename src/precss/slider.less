@@ -19,6 +19,10 @@
     height: 80vh;
     object-fit: cover;
     object-position: top center;
+   .xs-block({});
+    //@media all and (orientation: landscape) {
+    //  height: 100vh;
+    //}
   }
   &__triangle{
     position: absolute;
@@ -36,11 +40,10 @@
       position: absolute;
       left: 0;
       right: 0;
-      top: 0;
-      bottom: 22%;
+      bottom: 30%;
       width: 277px;
       height: 277px;
-      margin: auto;
+      margin: 0 auto;
     font-family: @font_Lato;
     font-weight: bold;
     padding: 10px;
@@ -54,6 +57,12 @@
     .lg-block({
       background: rgba(172, 172, 172, 0.7);
     });
+    .xs-block({
+      //@media all and (orientation: landscape){
+      //  height: 187px;
+      //}
+    });
+
     &::after {
       content: '';
       display: block;
@@ -76,10 +85,11 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-gap: 10px 20px;
+      grid-gap: 0px 10px;
+      align-items: center;
       grid-template-areas:
-              " spanLeftTop p3 spanRightTop"
-              " spanLeftBottom p3 spanRightBottom";
+              "spanLeftTop p3 spanRightTop"
+              "spanLeftBottom p3 spanRightBottom";
     }
     .spanLeft__top{
       display: inline-block;
@@ -102,7 +112,6 @@
       font-size: 1.22rem;
       color: @color_white;
       grid-area: p3;
-      align-self: center;
     }
     .spanRight__top{
       display: inline-block;
@@ -143,11 +152,14 @@
 
   &__link{
     position: absolute;
-    bottom: 25%;
+    bottom: 15%;
     left: 0;
     right: 0;
     margin: auto;
     text-align: center;
+    .sm-block({
+      //top: 75%;
+    });
   }
   &__button{
     padding: 10px 30px;
