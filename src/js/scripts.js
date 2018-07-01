@@ -61,7 +61,7 @@ $(function () {
         slidesToScroll: 1,
         arrows: false,
         dots: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 4000,
         fade: false
     });

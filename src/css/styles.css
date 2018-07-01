@@ -849,6 +849,16 @@ img {
   object-fit: cover;
   object-position: top center;
 }
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .slider__img {
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  .slider__img {
+    height: 80vh;
+  }
+}
 .slider__triangle {
   position: absolute;
   top: -1px;
@@ -867,11 +877,10 @@ img {
   right: 0;
   bottom: 30%;
   width: 277px;
-  height: 277px;
   margin: 0 auto;
   font-family: 'Lato';
   font-weight: bold;
-  padding: 10px;
+  padding: 30px;
   background: transparent;
   border: 2px solid #ffffff;
   text-align: center;
@@ -885,7 +894,15 @@ img {
     background: rgba(172, 172, 172, 0.7);
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .slider__text {
+    padding: 15px 30px;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  .slider__text {
+    padding: 30px;
+  }
 }
 .slider__text::after {
   content: '';
@@ -898,20 +915,57 @@ img {
   border: 1px solid #ffffff;
 }
 .slider__text .p1 {
-  font-size: 1.21rem;
+  font-size: 1.2rem;
   color: #ffffff;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .slider__text .p1 {
+    padding-bottom: 10px;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  .slider__text .p1 {
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+  }
 }
 .slider__text .p2 {
   font-size: 3.75rem;
   color: #000000;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .slider__text .p2 {
+    padding-bottom: 10px;
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  .slider__text .p2 {
+    padding-bottom: 20px;
+    font-size: 3.75rem;
+  }
 }
 .slider__text .p3__div {
+  padding-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 0px 10px;
+  grid-gap: 0 10px;
   align-items: center;
   grid-template-areas: "spanLeftTop p3 spanRightTop" "spanLeftBottom p3 spanRightBottom";
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .slider__text .p3__div {
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  .slider__text .p3__div {
+    padding-bottom: 20px;
+  }
 }
 .slider__text .spanLeft__top {
   display: inline-block;
@@ -931,9 +985,19 @@ img {
   grid-area: spanLeftBottom;
 }
 .slider__text .p3 {
-  font-size: 1.22rem;
+  font-size: 1.2rem;
   color: #ffffff;
   grid-area: p3;
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .slider__text .p3 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  .slider__text .p3 {
+    font-size: 1.2rem;
+  }
 }
 .slider__text .spanRight__top {
   display: inline-block;
@@ -952,6 +1016,16 @@ img {
 .slider__text .p4 {
   font-size: 1.96rem;
   color: #000000;
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .slider__text .p4 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  .slider__text .p4 {
+    font-size: 1.96rem;
+  }
 }
 .slider__text_left {
   left: 5%;
@@ -981,8 +1055,6 @@ img {
   margin: auto;
   text-align: center;
 }
-@media screen and (max-width: 720px) {
-}
 .slider__button {
   padding: 10px 30px;
   background: #f0975c;
@@ -990,6 +1062,16 @@ img {
   font-weight: bold;
   font-size: 1.5rem;
   text-transform: uppercase;
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .slider__button {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  .slider__button {
+    font-size: 1.5rem;
+  }
 }
 .promo {
   padding-top: 60px;
@@ -1082,7 +1164,7 @@ img {
   display: inline-block;
   position: absolute;
   top: 0;
-  left: 100%;
+  right: -59px;
   width: 0;
   height: 0;
   border-top: 50px solid transparent;
@@ -1105,7 +1187,7 @@ img {
   display: inline-block;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -1px;
   width: 0;
   height: 0;
   border-top: 50px solid transparent;
@@ -1123,7 +1205,7 @@ img {
   display: inline-block;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -1px;
   width: 0;
   height: 0;
   border-top: 50px solid transparent;
@@ -1146,7 +1228,7 @@ img {
   display: inline-block;
   position: absolute;
   top: 0;
-  left: -60px;
+  left: -59px;
   width: 0;
   height: 0;
   border-top: 50px solid transparent;
