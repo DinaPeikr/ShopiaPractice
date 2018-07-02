@@ -1,7 +1,6 @@
 .slider {
   //background: #B6B2AE;
   //line-height: 0;
-
   .wrapper-full {
     padding-left: 0;
     padding-right: 0;
@@ -12,7 +11,6 @@
   }
   &__item {
     position: relative;
-
   }
   &__img {
     width: 100vw;
@@ -30,14 +28,15 @@
   }
   &__triangle {
     position: absolute;
-    top: -1px;
+    top: 0;
     left: 0;
     right: 0;
     margin: auto;
-    width: 27%;
-    height: 10%;
     img {
       margin: 0 auto;
+      .sm-block({
+        width:200px;
+      });
     }
   }
   &__text {
@@ -46,7 +45,6 @@
     right: 0;
     bottom: 30%;
     width: 277px;
-    //height: 277px;
     margin: 0 auto;
     font-family: @font_Lato;
     font-weight: bold;

@@ -861,15 +861,18 @@ img {
 }
 .slider__triangle {
   position: absolute;
-  top: -1px;
+  top: 0;
   left: 0;
   right: 0;
   margin: auto;
-  width: 27%;
-  height: 10%;
 }
 .slider__triangle img {
   margin: 0 auto;
+}
+@media screen and (max-width: 720px) {
+  .slider__triangle img {
+    width: 200px;
+  }
 }
 .slider__text {
   position: absolute;
@@ -1692,7 +1695,7 @@ img {
 }
 @media screen and (max-width: 992px) {
   .brand__link {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 }
 .brand__img {
@@ -1705,6 +1708,17 @@ img {
   background: #d9bf8f;
   padding-top: 40px;
   padding-bottom: 40px;
+  position: relative;
+}
+.testimonial__triangle {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.testimonial__triangle img {
+  margin: 0 auto;
 }
 .testimonial__items {
   display: flex;

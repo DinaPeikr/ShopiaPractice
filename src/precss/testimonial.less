@@ -8,7 +8,18 @@
   background: @color_primery;
   padding-top: 40px;
   padding-bottom: 40px;
+  position: relative;
 }
+  &__triangle {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    img {
+      margin: 0 auto;
+    }
+  }
   &__items {
 
     .row-flex();
