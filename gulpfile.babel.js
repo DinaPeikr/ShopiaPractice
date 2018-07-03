@@ -85,6 +85,14 @@ gulp.task('html:templates', () => {
     .pipe(gulp.dest(cms.wordpress.html))
 })
 /****************************************************************************************************/
+//PHP task
+/****************************************************************************************************/
+gulp.task('php', () => {
+    return gulp.src('src/*.php')
+        .pipe(plumber())
+        .pipe(gulp.dest(cms.wordpress.html))
+})
+/****************************************************************************************************/
 //LESS task
 /****************************************************************************************************/
 gulp.task('less', () => {
@@ -240,6 +248,7 @@ gulp.task('watch', () => {
   })
   gulp.watch('src/templates/*.html', gulp.series('html:templates'))
   gulp.watch(`${cms.wordpress.html}*.html`).on('change', browserSync.reload)
+  gulp.watch('src/*.php', gulp.series('php'))
   gulp.watch('src/precss/**/*.less', gulp.series('less'))
   gulp.watch('src/css/*.css', gulp.series('css'))
   gulp.watch(`${cms.wordpress.css}styles.css`).on('change', browserSync.reload)
@@ -280,5 +289,5 @@ gulp.task('serve', () => {
 /****************************************************************************************************/
 //GLOBAL TASKS
 /****************************************************************************************************/
-gulp.task('build', gulp.series(gulp.parallel('html', 'less', 'css', 'js', 'libs', 'mylibs', 'favicon', 'fonts', 'img', 'svg:icons'), 'svg'))
+gulp.task('build', gulp.series(gulp.parallel('html', 'php', 'less', 'css', 'js', 'libs', 'mylibs', 'favicon', 'fonts', 'img', 'svg:icons'), 'svg'))
 gulp.task('dev', gulp.series('build', gulp.parallel('watch', 'serve')))

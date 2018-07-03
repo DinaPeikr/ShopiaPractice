@@ -32,6 +32,9 @@
     left: 0;
     right: 0;
     margin: auto;
+    .xs-block({
+      display: none;
+    });
     img {
       margin: 0 auto;
       .sm-block({
@@ -62,9 +65,12 @@
         padding: 15px 30px;
       }
       @media (orientation: portrait) {
-        padding: 30px;
+        padding: 20px 30px;
       }
     });
+    //.xs-block({
+    //
+    //});
     &::after {
       content: '';
       display: block;

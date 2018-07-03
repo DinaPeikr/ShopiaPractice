@@ -80,6 +80,25 @@ $(function () {
     })
 
 
+/* Footer Subscrube Form*/
+
+    $("#subscribe").submit(function() {
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find(".footer__form_input").val("");
+            $(".form__result").text("Thank you for registering! Soon we will contact you.");
+            $("#subscribe").trigger("reset").fadeOut(2000);
+
+
+        });
+        return false;
+    });
+
+
+
 
 
 

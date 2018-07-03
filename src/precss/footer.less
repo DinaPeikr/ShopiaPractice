@@ -142,12 +142,22 @@
   .form{
     margin: 20px 0;
     padding: 3px;
+    &__result{
+      font-size: 1rem;
+      font-weight: bold;
+      line-height: 30px;
+      color: #68E868;
+      text-transform: uppercase;
+      padding: 20px 0;
+    }
    }
   &__form{
     border: 1px solid @color_copyright_text;
     display: flex;
     flex-wrap: wrap;
+    color: @color_white;
       &_input {
+        color: @color_white;
         padding: 8px;
         border: 0;
         outline: 0;
@@ -175,6 +185,7 @@
       }
 
   }
+
   .copyright{
     padding-top: 20px;
     padding-bottom: 20px;

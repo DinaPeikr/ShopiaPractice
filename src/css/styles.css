@@ -866,6 +866,11 @@ img {
   right: 0;
   margin: auto;
 }
+@media screen and (max-width: 576px) {
+  .slider__triangle {
+    display: none;
+  }
+}
 .slider__triangle img {
   margin: 0 auto;
 }
@@ -904,7 +909,7 @@ img {
 }
 @media screen and (max-width: 992px) and (orientation: portrait) {
   .slider__text {
-    padding: 30px;
+    padding: 20px 30px;
   }
 }
 .slider__text::after {
@@ -1717,6 +1722,11 @@ img {
   right: 0;
   margin: auto;
 }
+@media screen and (max-width: 576px) {
+  .testimonial__triangle {
+    display: none;
+  }
+}
 .testimonial__triangle img {
   margin: 0 auto;
 }
@@ -1954,12 +1964,22 @@ img {
   margin: 20px 0;
   padding: 3px;
 }
+.footer .form__result {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 30px;
+  color: #68E868;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
 .footer__form {
   border: 1px solid #363636;
   display: flex;
   flex-wrap: wrap;
+  color: #ffffff;
 }
 .footer__form_input {
+  color: #ffffff;
   padding: 8px;
   border: 0;
   outline: 0;
