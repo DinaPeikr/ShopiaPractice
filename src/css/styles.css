@@ -403,9 +403,9 @@ img {
     display: block;
     padding: 15px 35px;
   }
-}
-.user__menu_link:hover {
-  background: #d9d9d9;
+  .user__menu_link:hover {
+    background: #d9d9d9;
+  }
 }
 .user__phone {
   box-sizing: border-box;
