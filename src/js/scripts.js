@@ -98,7 +98,31 @@ $(function () {
     });
 
 
+    /* Smooth scroll to the pages block
+          ====================================*/
 
+    $(".nav__menu_link").on("click", function(e) {
+        console.log($(this));
+        e.preventDefault();
+
+        let currentBlock = $(this).attr("href"),
+            currentBlockOffset = $(currentBlock).offset().top;
+
+        $("html, body").animate({
+            scrollTop: currentBlockOffset
+        }, 2000);
+
+    });
+
+    let $links = $('.nav__menu_link');
+
+    $links.on('click', function(e) {
+        e.preventDefault();
+
+        let link = $(this);
+        link.parent('li').addClass('actived');
+        $links.not(link).parent('li').removeClass('actived');
+    });
 
 
 

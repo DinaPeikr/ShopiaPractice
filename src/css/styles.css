@@ -487,7 +487,7 @@ img {
   margin-right: 15px;
   width: calc(33.333333333333336% - 30px);
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   font-family: 'PlayfairDisplay';
   font-weight: normal;
@@ -516,10 +516,16 @@ img {
     text-align: center;
   }
 }
+.header .nav__menu_item.actived .nav__menu_link {
+  color: #f0975c;
+}
 @media screen and (max-width: 992px) {
   .header .nav__menu_item {
     display: block;
     transition: all 1s;
+  }
+  .header .nav__menu_item.actived .nav__menu_link {
+    color: #ffffff;
   }
   .header .nav__menu_item::after {
     content: "";
@@ -535,7 +541,7 @@ img {
   }
 }
 .header .nav__menu_link {
-  padding: 15px;
+  padding: 15px 0;
   display: block;
   transition: all 1s;
 }
