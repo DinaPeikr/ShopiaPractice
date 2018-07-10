@@ -266,6 +266,11 @@ img {
   text-align: center;
   cursor: pointer;
 }
+@media screen and (max-width: 576px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+}
 .user {
   background: #f2f2f2;
   font-size: 0.6875rem;
@@ -1619,7 +1624,8 @@ img {
   justify-content: center;
   z-index: 555;
 }
-.card__img {
+.card__img,
+.card img {
   width: 100%;
   transition: all .5s;
 }
