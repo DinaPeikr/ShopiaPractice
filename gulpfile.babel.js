@@ -188,8 +188,8 @@ gulp.task('fonts', () => {
 gulp.task('img', () => {
     return gulp.src(['src/img/**/*.{jpg,png,gif}', 'src/images/**/*.{jpg,png,gif}'], {base: 'src'})
         .pipe(newer(cms.wordpress.img))
-        .pipe(gulpIf(!isDevelopment, imagemin({progressive: true})))
-         //.pipe(gulpIf(!isDevelopment, smushit({verbose: true})))
+        //.pipe(gulpIf(!isDevelopment, imagemin({progressive: true})))
+         .pipe(gulpIf(!isDevelopment, smushit({verbose: true})))
         .pipe(gulpIf(isDevelopment, gulp.symlink(cms.wordpress.img), gulp.dest(cms.wordpress.img)))
 })
 /****************************************************************************************************/
