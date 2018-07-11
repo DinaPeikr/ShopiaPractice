@@ -1606,6 +1606,7 @@ img {
 .card {
   transition: all .5s;
   cursor: pointer;
+  position: relative;
 }
 .card .label {
   position: absolute;
@@ -1629,35 +1630,38 @@ img {
   width: 100%;
   transition: all .5s;
 }
-.card .form {
-  display: flex;
-  justify-content: center;
+.card__link::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: transparent;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0;
 }
-.card .form:hover {
-  background: rgba(0, 0, 0, 0.5);
+.card__link:hover::before {
+  opacity: .5;
 }
-.card .form:hover .btn__addcart {
+.card:hover .btn__addcart {
   background: #f0975c;
   background: linear-gradient(135deg, transparent 32px, #f0975c 0) top left, linear-gradient(-135deg, transparent 32px, #f0975c 0) top right;
   background-size: 51% 100%;
   background-repeat: no-repeat;
 }
 .card .form__addcart {
-  align-self: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
 }
-.card .form .btn {
+.card .btn {
   color: #ffffff;
   border: none;
   outline: none;
   cursor: pointer;
 }
-.card .form .btn__addcart {
+.card .btn__addcart {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1672,7 +1676,7 @@ img {
   background-size: 51% 100%;
   background-repeat: no-repeat;
 }
-.card .form .btn__addcart_img {
+.card .btn__addcart_img {
   display: inline-block;
   fill: currentColor;
   width: 10px;
